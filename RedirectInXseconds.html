@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="generator" content="HTML Tidy for HTML5 for Windows version 5.8.0">
+  <style>
+    h2 { text-align: center; }
+  </style>
+  <script type="text/javascript">
+  <!--http://www.webdeveloper.com/forum/showthread.php?237319-Redirect-Count-down!-->
+    window.onload=function() {
+      function countdown() {
+        if ( typeof countdown.counter == 'undefined' ) {
+          countdown.counter = 3; // initial count
+        }
+        if(countdown.counter > 0) {
+          document.getElementById('count').innerHTML = countdown.counter--;
+          setTimeout(countdown, 1000);
+        } else {
+          location.href = 'http://localhost:8020/RedirectInXseconds.html';
+        }
+      }
+      countdown();
+    };
+  </script>
+  <title>Redirect in X seconds</title>
+</head>
+<body>
+  <h2>Redirecting in <span id="count"></span> seconds or<br>
+  follow this link to<br>
+  <a href="http://localhost:8020/RedirectInXseconds.html">http://localhost:8020/RedirectInXseconds.html</a></h2>
+</body>
+</html>
