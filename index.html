@@ -5,6 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="/css/KnotOwl.css">
   <link rel="stylesheet" type="text/css" href="/css/menu.css">
+  <style>
+    table { margin: 0 auto; width: 30%; }
+    table, th, td { border-collapse: collapse; border: 1px solid black; white-space: normal; }
+  </style>
   <title>The Knot Owl's home</title>
 </head>
 <body>
@@ -25,7 +29,36 @@
       </div>
     </nav>
   </header><!-- Content Start -->
-  <p><a href="/" class="nav-branding"><img src="/img/OwlKnotMasters.svg" class="fitOwl" alt="The Knot Owl with the Good Turn knot"></a></p><!-- Content End -->
+  <table>
+    <tr>
+      <td>
+        <ul style="padding: 0px 39px; /*top/bottom/left/right*/ list-style-type: circle;">
+          <li> <a href='/'>Home</a> </li>
+          <li onclick='mySubMenu(1)'>Advancement
+            <ul style="padding: 9px; list-style-type: circle;">
+              <li>* <a href='/Eagle/'>Eagle</a> </li>
+              <li>* <a href='/MBCinfo/'>MBC Info</a> </li>
+              <li>* <a href='/Reports/'>Reports</a> </li>
+              <li>* <a href='/Venturing/'>Venturing</a> </li>
+              <li>* <a href='/Misc/'>Misc</a> </li>
+              <li>* <a href='/FAQ/'>FAQ</a> </li>
+            </ul>
+          </li>
+          <li onclick='mySubMenu(2)'>Chief Okemos
+            <ul style="padding: 9px; list-style-type: circle;">
+              <li> <a href='/Laurels/'>Laurels</a> </li>
+              <li>* <a href='/Calendar/'>Calendar</a> </li>
+              <li>* <a href='/FAQ/'>FAQ</a> </li>
+            </ul>
+          </li>
+          <li> <a href='/about.html'>About</a> </li>
+        </ul>
+      </td>
+    </tr>
+  </table>
+  <p><a href="/" class="nav-branding"><img src="/img/OwlKnotMasters.svg" class="fitOwl" alt="The Knot Owl with the Good Turn knot"></a></p><br>
+  <!-- Content End -->
+   
   <script type="text/javascript" src="/js/menuFunction.js"></script> <!-- Load the menu Function -->
    
   <script type="text/javascript" src="/js/location.js"></script> <!-- display where this came from -->
