@@ -1,8 +1,8 @@
 dns record:
-	cname  trevor   mussont63.github.io.
+	cname  chiefo   mussont63.github.io.
 
-github: Trevor.KnotOwl.net
+github: ChiefO.KnotOwl.net
 settings / pages (menu on left):
 	deploy from branch
 	main, save
-Custom domain = trevor.knotowl.net, save
+Custom domain = chiefo.knotowl.net, save
