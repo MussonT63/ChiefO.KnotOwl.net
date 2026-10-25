@@ -20,7 +20,7 @@ ul, ol { list-style-type: none; }
   justify-content: space-between;
   align-items: center;
   padding: 1rem 1.5rem;
-  background-color: #333;
+  background-color: #333; /* The nice dark gray menu background */
   color: white; /* font color */
 }
 div { display: flex; }
@@ -49,7 +49,7 @@ div { display: flex; }
 }
 
 /* default (mobile/narrow) settings start */
-body { background-color: blue; }
+body { background-color: #bcc6cc; } /* Temporary blue/silver narrow screens while testing "silver" when done testing */
 .nav-menu {
   display: flex;
   list-style: none;
@@ -73,7 +73,7 @@ body { background-color: blue; }
       /* right: -100%; Position off-screen initially */
       /* top: 105px; Adjust based on navbar height */
       width: 30%; /* open menu width */
-      background-color: blue;
+      background-color: #333;
   }
   body { background-color: silver; }
   /* .nav-item { margin: 15px; } This is the margin around menu items */

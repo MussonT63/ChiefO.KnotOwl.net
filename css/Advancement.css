@@ -1,0 +1,12 @@
+/* adding during Menu implementation */
+
+table { margin-left: auto; margin-right: auto; }
+a:link, a:visited, a:hover, a:active { color: blue; text-decoration: none; }
+h5 { text-align: center; }
+.red { color: red; }
+summary {
+  font-size: 110%;
+  font-weight: bold;
+}
+table, th, td { border-collapse: collapse; border: 0px solid black; white-space: nowrap; }
+

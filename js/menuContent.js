@@ -7,7 +7,7 @@ document.write( "      <li class=sub-item> <a class='nav-link' href='/Eagle/'>Ea
 document.write( "      <li class=sub-item> <a class='nav-link' href='/MBCinfo/'>MBC Info</a> </li>" )
 document.write( "      <li class=sub-item> <a class='nav-link' href='/Reports/'>Reports</a> </li>" )
 document.write( "      <li class=sub-item> <a class='nav-link' href='/Venturing/'>Venturing</a> </li>" )
-document.write( "      <li class=sub-item> <a class='nav-link' href='/Misc/'>Misc</a> </li>" )
+document.write( "      <li class=sub-item> <a class='nav-link' href='/Misc/'>Miscellaneous</a> </li>" )
 document.write( "      <li class=sub-item> <a class='nav-link' href='/FAQ/'>FAQ</a> </li>" )
 document.write( "    </ul>" )
 document.write( "  </li>" )
