@@ -19,4 +19,9 @@ document.write( "      <li class=sub-item> <a class='nav-link' href='/FAQ/'>FAQ<
 document.write( "    </ul>" )
 document.write( "  </li>" )
 document.write( "  <li class='nav-item'> <a class='nav-link' href='/about.html'>About</a> </li>" )
+
+document.write( "  <li class='nav-item'> <a class='nav-link' href='/PlayingWithMenu/'>PlayingWithMenu</a> </li>" )
+
 document.write( "</ul>" )
+document.write( "<script type='text/javascript' src='/js/menuFunction.js'></script>" )
+
