@@ -1,17 +1,18 @@
+
 function addElement() {
   let Header   = document.createElement("header");		//<header>
   let Nav      = document.createElement("nav");			//  <nav class="navbar">
-  Nav.setAttribute("class","navbar");
+      Nav.setAttribute("class","navbar");
 
   let logoDiv  = document.createElement("div");			//    <div>	//      <!-- Site Logo -->
   let logoLink = document.createElement("a");			//      <a href="." class="nav-branding">
-  logoLink.setAttribute("href",".");
-  logoLink.setAttribute("class","nav-branding");
+      logoLink.setAttribute("href",".");
+      logoLink.setAttribute("class","nav-branding");
 
   let logoImg  = document.createElement("img");			//        <img alt="Wood Badge Owl" width="35" src="/img/OwlWoodBadgePatrol.svg">
-  logoImg.setAttribute("alt","Wood Badge Owl");
-  logoImg.setAttribute("width","35");
-  logoImg.setAttribute("src","img/OwlWoodBadgePatrol.svg");
+      logoImg.setAttribute("alt","Wood Badge Owl");
+      logoImg.setAttribute("width","35");
+      logoImg.setAttribute("src","img/OwlWoodBadgePatrol.svg");
 
   logoLink.appendChild(logoImg);				//        </img>
   logoDiv.appendChild(logoLink);				//      </a>
@@ -19,10 +20,10 @@ function addElement() {
 
   let titleDiv = document.createElement("div");			//    <div>	//      <!-- Page title (pulled in from file in local dir) -->
   let titleH2   = document.createElement("h2");			//      <h2 id="siteTitle">
-  logoImg.setAttribute("id","siteTitle");
+      titleH2.setAttribute("id","siteTitle");
   let titleScript = document.createElement("script");		//        <script type="text/javascript" src="./pageTitle.js">
-  logoImg.setAttribute("type","text/javascript");
-  logoImg.setAttribute("src","./pageTitle.js");
+      titleScript.setAttribute("type","text/javascript");
+      titleScript.setAttribute("src","./pageTitle.js");
 
   titleH2.appendChild(titleScript);				//        </script>
   titleDiv.appendChild(titleH2);				//      </h2>
@@ -30,121 +31,121 @@ function addElement() {
 
   let menuDiv  = document.createElement("div");			//    <div>	//      <!-- Hamburger button using semantic HTML -->
   let menuButton = document.createElement("button");		//      <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
-	string.setAttribute( );
-	string.setAttribute( );
-	string.setAttribute( );
-	string.setAttribute( );
+      menuButton.setAttribute("class","hamburger");
+      menuButton.setAttribute("id","hamburger");
+      menuButton.setAttribute("aria-label","Toggle navigation");
+      menuButton.setAttribute("aria-expanded","false");
   let menuBarSpan1 = document.createElement("span");		//        <span class="bar">&nbsp;
-	string.setAttribute( );
+      menuBarSpan1.setAttribute("class","bar");		// &nbsp;
 	//        </span> 
   let menuBarSpan2 = document.createElement("span");		//        <span class="bar">&nbsp;
-	string.setAttribute( );
+      menuBarSpan2.setAttribute("class","bar");		// &nbsp;
 	//        </span> 
   let menuBarSpan3 = document.createElement("span");		//        <span class="bar">&nbsp;
-	string.setAttribute( );
+      menuBarSpan3.setAttribute("class","bar");		// &nbsp;
 	//        </span>
 	//      </button>
   let menuList = document.createElement("ul");			//      <ul class="nav-menu" id="nav-menu">
-	string.setAttribute( );
-	string.setAttribute( );
+      menuList.setAttribute( "class","nav-menu");
+      menuList.setAttribute( "id","nav-menu");
   let menuItem1 = document.createElement("li");			//        <li class="nav-item">
-	string.setAttribute( );
+      menuItem1.setAttribute( "class","nav-item");
   let menuItem1Link = document.createElement("a");		//          <a class="nav-link" href="/">Home
-	string.setAttribute( );
-	string.setAttribute( );
+      menuItem1Link.setAttribute( "class","nav-link");
+      menuItem1Link.setAttribute( "href","/");		// Home
 	//          </a>
 	//        </li>
   let menuItem2 = document.createElement("li");			//        <li class="nav-item" onclick="mySubMenu(1)">Advancement
-	string.setAttribute( );
-	string.setAttribute( );
+      menuItem2.setAttribute( "class","nav-item");
+      menuItem2.setAttribute( "onclick","mySubMenu(1)"); // Advancement
   let menuListSub1 = document.createElement("ul");		//          <ul id="sub-menu-1" class="sub-menu">
-	string.setAttribute( );
-	string.setAttribute( );
+      menuListSub1.setAttribute( "id","sub-menu-1");
+      menuListSub1.setAttribute( "class","sub-menu");
   let menuItem2Sub1 = document.createElement("li");		//            <li class="sub-item">
-	string.setAttribute( );
+      menuItem2Sub1.setAttribute( "class","sub-item");
   let menu-Link = document.createElement("a");			//              <a class="nav-link" href="/Eagle/">Eagle
-	string.setAttribute( );
-	string.setAttribute( );
+      menu-Link.setAttribute( "class","nav-link");
+      menu-Link.setAttribute( "href","/Eagle/");		 // Eagle
 	//              </a>
 	//            </li>
   let menu-Item = document.createElement("li");			//            <li class="sub-item">
-	string.setAttribute( );
+      menu-Item.setAttribute( "class","sub-item");
   let menu-Link = document.createElement("a");			//              <a class="nav-link" href="/MBCinfo/">MBC Info
-	string.setAttribute( );
-	string.setAttribute( );
+      menu-Link.setAttribute( "class","nav-link");
+      menu-Link.setAttribute( "href","/MBCinfo/");	// MBC Info
 	//              </a>
 	//            </li>
   let menu-Item = document.createElement("li");			//            <li class="sub-item">
-	string.setAttribute( );
+      menu-Item.setAttribute( "class","sub-item");
   let menu-Link = document.createElement("a");			//              <a class="nav-link" href="/Reports/">Reports
-	string.setAttribute( );
-	string.setAttribute( );
+      menu-Link.setAttribute( "class","nav-link");
+      menu-Link.setAttribute( "href","/Reports/");	// Reports
 	//              </a>
 	//            </li>
   let menu-Item = document.createElement("li");			//            <li class="sub-item">
-	string.setAttribute( );
+      menu-Item.setAttribute( "class","sub-item");
   let menu-Link = document.createElement("a");			//              <a class="nav-link" href="/Venturing/">Venturing
-	string.setAttribute( );
-	string.setAttribute( );
+      menu-Link.setAttribute( "class","nav-link");
+      menu-Link.setAttribute( "href","/Venturing/">);	// Venturing
 	//              </a>
 	//            </li>
   let menu-Item = document.createElement("li");			//            <li class="sub-item">
-	string.setAttribute( );
+      menu-Item.setAttribute( "class","sub-item");
   let menu-Link = document.createElement("a");			//              <a class="nav-link" href="/Misc/">Miscellaneous
-	string.setAttribute( );
-	string.setAttribute( );
+      menu-Link.setAttribute( "class","nav-link");
+      menu-Link.setAttribute( "href","/Misc/");		// Miscellaneous
 	//              </a>
 	//            </li>
   let menu-Item = document.createElement("li");			//            <li class="sub-item">
-	string.setAttribute( );
+      menu-Item.setAttribute( "class","sub-item");
   let menu-Link = document.createElement("a");			//              <a class="nav-link" href="/FAQ/">FAQ
-	string.setAttribute( );
-	string.setAttribute( );
+      menu-Link.setAttribute( "class","nav-link");
+      menu-Link.setAttribute( "href","/FAQ/");		// FAQ
 	//              </a>
 	//            </li>
 	//          </ul>
 	//        </li>
   let menu-Item = document.createElement("li");			//        <li class="nav-item" onclick="mySubMenu(2)">Chief Okemos
-	string.setAttribute( );
-	string.setAttribute( );
+      menu-Item.setAttribute( "class","nav-item");
+      menu-Item.setAttribute( "onclick","mySubMenu(2)");	// Chief Okemos
   let menu-List = document.createElement("ul");			//          <ul id="sub-menu-2" class="sub-menu">
-	string.setAttribute( );
-	string.setAttribute( );
+      menu-List.setAttribute( "id","sub-menu-2");
+      menu-List.setAttribute( "class","sub-menu");
   let menu-Item = document.createElement("li");			//            <li class="sub-item">
-	string.setAttribute( );
+      menu-Item.setAttribute( "class","sub-item");
   let menu-Link = document.createElement("a");			//              <a class="nav-link" href="/Laurels/">Laurels
-	string.setAttribute( );
-	string.setAttribute( );
+      menu-Link.setAttribute( "class","nav-link");
+      menu-Link.setAttribute( "href","/Laurels/");	// Laurels
 	//              </a>
 	//            </li>
   let menu-Item = document.createElement("li");			//            <li class="sub-item">
-	string.setAttribute( );
+      menu-Item.setAttribute( "class","sub-item");
   let menu-Link = document.createElement("a");			//              <a class="nav-link" href="/Calendar/">Calendar
-	string.setAttribute( );
-	string.setAttribute( );
+      menu-Link.setAttribute( "class","nav-link");
+      menu-Link.setAttribute( "href","/Calendar/");	// Calendar
 	//              </a>
 	//            </li>
   let menu-Item = document.createElement("li");			//            <li class="sub-item">
-	string.setAttribute( );
+      menu-Item.setAttribute( "class","sub-item");
   let menu-Link = document.createElement("a");			//              <a class="nav-link" href="/FAQ/">FAQ
-	string.setAttribute( );
-	string.setAttribute( );
+      menu-Link.setAttribute( "class","nav-link");
+      menu-Link.setAttribute( "href","/FAQ/");		// FAQ
 	//              </a>
 	//            </li>
 	//          </ul>
 	//        </li>
   let menu-Item = document.createElement("li");			//        <li class="nav-item">
-	string.setAttribute( );
+      menu-Item.setAttribute( "class","nav-item");
   let menu-Link = document.createElement("a");			//          <a class="nav-link" href="/about.html">About
-	string.setAttribute( );
-	string.setAttribute( );
+      menu-Link.setAttribute( "class","nav-link");
+      menu-Link.setAttribute( "href","/about.html");	// About
 	//          </a>
 	//        </li>
   let menu-Item = document.createElement("li");			//        <li class="nav-item">
-	string.setAttribute( );
+      menu-Item.setAttribute( "class","nav-item");
   let menu-Link = document.createElement("a");			//          <a class="nav-link" href="/PlayingWithMenu/">PlayingWithMenu
-	string.setAttribute( );
-	string.setAttribute( );
+      menu-Link.setAttribute( "class","nav-link");
+      menu-Link.setAttribute( "href","/PlayingWithMenu/"); // PlayingWithMenu
 	//          </a>
 	//        </li>
 	//      </ul>
