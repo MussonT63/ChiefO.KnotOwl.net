@@ -39,8 +39,6 @@ document.write( "  </header>" )
 document.write( "        <script type='text/javascript' src='/js/menuFunction.js'></script> <!-- Load the menu Function -->" )
 */
 
-/*
-*/
 // Sub Menu bits
 function mySubMenu(i) {
   let subMenu = document.getElementById(`sub-menu-${i}`);
@@ -60,3 +58,5 @@ hamburger.addEventListener('click', () => {
   const isExpanded = hamburger.getAttribute('aria-expanded') === 'true' || false;
   hamburger.setAttribute('aria-expanded', !isExpanded);
 });
+/*
+*/
