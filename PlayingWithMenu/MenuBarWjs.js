@@ -1,3 +1,11 @@
+function exampleAddElement() {
+  let newH2 = document.createElement("h2");			// create a new h2 element
+  let newH2Content = document.createTextNode("js example");	// and give it some content
+  newH2.appendChild(newH2Content);				// add the text node to the newly created div
+  let currentDiv = document.getElementById("div1");		// add the newly created element and its content into the DOM
+  document.body.insertBefore(newH2, currentDiv);		// add the newly created element and its content into the DOM
+} exampleAddElement();
+document.write( "<br><hr><br>" )
 
 function addElement() {
   let Header   = document.createElement("header");		//<header>
@@ -12,11 +20,11 @@ function addElement() {
   let logoImg  = document.createElement("img");			//        <img alt="Wood Badge Owl" width="35" src="/img/OwlWoodBadgePatrol.svg">
       logoImg.setAttribute("alt","Wood Badge Owl");
       logoImg.setAttribute("width","35");
-      logoImg.setAttribute("src","img/OwlWoodBadgePatrol.svg");
+      logoImg.setAttribute("src","/img/OwlWoodBadgePatrol.svg"); //        </img> not needed...
 
-  logoLink.appendChild(logoImg);				//        </img>
-  logoDiv.appendChild(logoLink);				//      </a>
-  Nav.appendChild(logoDiv);					//    </div>
+  logoLink.appendChild(logoImg);				//      </a>
+  logoDiv.appendChild(logoLink);				//    </div>
+  Nav.appendChild(logoDiv);					//  </nav> appending a first div to nav
 
   let titleDiv = document.createElement("div");			//    <div>	//      <!-- Page title (pulled in from file in local dir) -->
   let titleH2   = document.createElement("h2");			//      <h2 id="siteTitle">
@@ -25,9 +33,9 @@ function addElement() {
       titleScript.setAttribute("type","text/javascript");
       titleScript.setAttribute("src","./pageTitle.js");
 
-  titleH2.appendChild(titleScript);				//        </script>
-  titleDiv.appendChild(titleH2);				//      </h2>
-  Nav.appendChild(titleDiv);					//    </div>
+  titleH2.appendChild(titleScript);				//      </h2>
+  titleDiv.appendChild(titleH2);				//    </div>
+  Nav.appendChild(titleDiv);					//  </nav> appending a second div to nav
 
   let menuDiv  = document.createElement("div");			//    <div>	//      <!-- Hamburger button using semantic HTML -->
   let menuButton = document.createElement("button");		//      <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
@@ -35,29 +43,52 @@ function addElement() {
       menuButton.setAttribute("id","hamburger");
       menuButton.setAttribute("aria-label","Toggle navigation");
       menuButton.setAttribute("aria-expanded","false");
-  let menuBarSpan1 = document.createElement("span");		//        <span class="bar">&nbsp;
-      menuBarSpan1.setAttribute("class","bar");		// &nbsp;
-	//        </span> 
-  let menuBarSpan2 = document.createElement("span");		//        <span class="bar">&nbsp;
-      menuBarSpan2.setAttribute("class","bar");		// &nbsp;
-	//        </span> 
-  let menuBarSpan3 = document.createElement("span");		//        <span class="bar">&nbsp;
-      menuBarSpan3.setAttribute("class","bar");		// &nbsp;
-	//        </span>
-	//      </button>
+
+  let menuBar1Span = document.createElement("span");		//        <span class="bar">&nbsp;
+      menuBar1Span.setAttribute("class","bar");		// &nbsp;
+
+  menuButton.appendChild(menuBar1Span);				//      </button> first bar
+
+  let menuBar2Span = document.createElement("span");		//        <span class="bar">&nbsp;
+      menuBar2Span.setAttribute("class","bar");		// &nbsp;
+
+  menuButton.appendChild(menuBar2Span);				//      </button> second bar
+
+  let menuBar3Span = document.createElement("span");		//        <span class="bar">&nbsp;
+      menuBar3Span.setAttribute("class","bar");		// &nbsp;
+
+  menuButton.appendChild(menuBar3Span);				//      </button> third bar
+  menuDiv.appendChild(menuButton);				//    </div>
+  Nav.appendChild(menuDiv);					//  </nav> appending a third div to nav
+
   let menuList = document.createElement("ul");			//      <ul class="nav-menu" id="nav-menu">
       menuList.setAttribute( "class","nav-menu");
       menuList.setAttribute( "id","nav-menu");
-  let menuItem1 = document.createElement("li");			//        <li class="nav-item">
-      menuItem1.setAttribute( "class","nav-item");
-  let menuItem1Link = document.createElement("a");		//          <a class="nav-link" href="/">Home
-      menuItem1Link.setAttribute( "class","nav-link");
-      menuItem1Link.setAttribute( "href","/");		// Home
+
+  let menuHome = document.createElement("li");			//        <li class="nav-item">
+      menuHome.setAttribute( "class","nav-item");
+  let menuHomeLink = document.createElement("a");		//          <a class="nav-link" href="/">Home
+      menuHomeLink.setAttribute( "class","nav-link");
+      menuHomeLink.setAttribute( "href","/");			// Home
+
+  let menuHomeLinkText = document.createTextNode("Home");	// and give it some content
+	
+  menuHomeLink.appendChild(menuHomeLinkText);
+  menuHome.appendChild(menuHomeLink);
+  menuList.appendChild(menuHome);
 	//          </a>
 	//        </li>
-  let menuItem2 = document.createElement("li");			//        <li class="nav-item" onclick="mySubMenu(1)">Advancement
-      menuItem2.setAttribute( "class","nav-item");
-      menuItem2.setAttribute( "onclick","mySubMenu(1)"); // Advancement
+  let menuAdvancement = document.createElement("li");			//        <li class="nav-item" onclick="mySubMenu(1)">Advancement
+      menuAdvancement.setAttribute( "class","nav-item");
+      menuAdvancement.setAttribute( "onclick","mySubMenu(1)"); // Advancement
+
+  let menuAdvancementText = document.createTextNode("Advancement");	// and give it some content
+
+  menuAdvancement.appendChild(menuAdvancementText);
+  menuList.appendChild(menuAdvancement);
+  menuDiv.appendChild(menuList);				//    </div> at the same level as <button>...
+//--------
+/*
   let menuListSub1 = document.createElement("ul");		//          <ul id="sub-menu-1" class="sub-menu">
       menuListSub1.setAttribute( "id","sub-menu-1");
       menuListSub1.setAttribute( "class","sub-menu");
@@ -151,54 +182,62 @@ function addElement() {
 	//      </ul>
 	//    </div>
 	//  </nav>
+*/
+  Header.appendChild(Nav);					//</header> - make Nav a child of Header...
 
-  Header.appendChild(Nav);					//</header>
+  let domMenu = document.getElementById("Menu");		// add the newly created element and its content into the DOM
+  document.body.insertBefore(Header, domMenu);			// add the newly created element and its content into the DOM
 }
 addElement(); // run the addElement function created above
 
 
+document.write( "<br><hr><br>" )
 
 
-//document.write( "  <header>" )
-//document.write( "    <nav class='navbar'>" )
-//document.write( "      <div> <!-- Site Logo -->" )
-//document.write( "        <a href='.' class='nav-branding'><img alt='Wood Badge Owl' width='35' src='/img/OwlWoodBadgePatrol.svg'></a>" )
-//document.write( "      </div>" )
-//document.write( "      <div> <!-- Page title (pulled in from file in local dir) -->" )
-//document.write( "        <h2 id='siteTitle'>" )
-//document.write( "        <script type='text/javascript' src='./pageTitle.js'></script></h2>" )
-//document.write( "      </div>" )
-//document.write( "      <div> <!-- Hamburger button using semantic HTML -->" )
-//document.write( "        <button class='hamburger' id='hamburger' aria-label='Toggle navigation' aria-expanded='false'> <span class='bar'>&nbsp;</span> <span class='bar'>&nbsp;</span> <span class='bar'>&nbsp;</span></button>" )
-//document.write( "        <ul class='nav-menu' id='nav-menu'>" )
-//document.write( "          <li class='nav-item'> <a class='nav-link' href='/'>Home</a> </li>" )
-//document.write( "          <li class='nav-item' onclick='mySubMenu(1)'>Advancement" )
-//document.write( "            <ul id='sub-menu-1' class='sub-menu'>" )
-//document.write( "              <li class='sub-item'> <a class='nav-link' href='/Eagle/'>Eagle</a> </li>" )
-//document.write( "              <li class='sub-item'> <a class='nav-link' href='/MBCinfo/'>MBC Info</a> </li>" )
-//document.write( "              <li class='sub-item'> <a class='nav-link' href='/Reports/'>Reports</a> </li>" )
-//document.write( "              <li class='sub-item'> <a class='nav-link' href='/Venturing/'>Venturing</a> </li>" )
-//document.write( "              <li class='sub-item'> <a class='nav-link' href='/Misc/'>Miscellaneous</a> </li>" )
-//document.write( "              <li class='sub-item'> <a class='nav-link' href='/FAQ/'>FAQ</a> </li>" )
-//document.write( "            </ul>" )
-//document.write( "          </li>" )
-//document.write( "          <li class='nav-item' onclick='mySubMenu(2)'>Chief Okemos" )
-//document.write( "            <ul id='sub-menu-2' class='sub-menu'>" )
-//document.write( "              <li class='sub-item'> <a class='nav-link' href='/Laurels/'>Laurels</a> </li>" )
-//document.write( "              <li class='sub-item'> <a class='nav-link' href='/Calendar/'>Calendar</a> </li>" )
-//document.write( "              <li class='sub-item'> <a class='nav-link' href='/FAQ/'>FAQ</a> </li>" )
-//document.write( "            </ul>" )
-//document.write( "          </li>" )
-//document.write( "          <li class='nav-item'> <a class='nav-link' href='/about.html'>About</a> </li>" )
-//document.write( "          <li class='nav-item'> <a class='nav-link' href='/PlayingWithMenu/'>PlayingWithMenu</a> </li>" )
-//document.write( "        </ul>" )
-//document.write( "      </div>" )
-//document.write( "    </nav>" )
-//document.write( "  </header>" )
-
-document.write( "        <script type='text/javascript' src='/js/menuFunction.js'></script> <!-- Load the menu Function -->" )
 /*
+document.write( "  <header>" )
+document.write( "    <nav class='navbar'>" )
+document.write( "      <div> <!-- Site Logo -->" )
+document.write( "        <a href='.' class='nav-branding'><img alt='Wood Badge Owl' width='35' src='/img/OwlWoodBadgePatrol.svg'></a>" )
+document.write( "      </div>" )
+document.write( "      <div> <!-- Page title (pulled in from file in local dir) -->" )
+document.write( "        <h2 id='siteTitle'>" )
+document.write( "        html in js <!--script type='text/javascript' src='./pageTitle.js'></script!--></h2>" )
+document.write( "      </div>" )
+document.write( "      <div> <!-- Hamburger button using semantic HTML -->" )
+document.write( "        <button class='hamburger' id='hamburger' aria-label='Toggle navigation' aria-expanded='false'>" )
+document.write( "          <span class='bar'></span>" )
+document.write( "          <span class='bar'>&nbsp;</span>" )
+document.write( "          <span class='bar'>&nbsp;</span>" )
+document.write( "        </button>" )
+document.write( "        <ul class='nav-menu' id='nav-menu'>" )
+document.write( "          <li class='nav-item'> <a class='nav-link' href='/'>Home</a> </li>" )
+document.write( "          <li class='nav-item' onclick='mySubMenu(1)'>Advancement" )
+document.write( "            <ul id='sub-menu-1' class='sub-menu'>" )
+document.write( "              <li class='sub-item'> <a class='nav-link' href='/Eagle/'>Eagle</a> </li>" )
+document.write( "              <li class='sub-item'> <a class='nav-link' href='/MBCinfo/'>MBC Info</a> </li>" )
+document.write( "              <li class='sub-item'> <a class='nav-link' href='/Reports/'>Reports</a> </li>" )
+document.write( "              <li class='sub-item'> <a class='nav-link' href='/Venturing/'>Venturing</a> </li>" )
+document.write( "              <li class='sub-item'> <a class='nav-link' href='/Misc/'>Miscellaneous</a> </li>" )
+document.write( "              <li class='sub-item'> <a class='nav-link' href='/FAQ/'>FAQ</a> </li>" )
+document.write( "            </ul>" )
+document.write( "          </li>" )
+document.write( "          <li class='nav-item' onclick='mySubMenu(2)'>Chief Okemos" )
+document.write( "            <ul id='sub-menu-2' class='sub-menu'>" )
+document.write( "              <li class='sub-item'> <a class='nav-link' href='/Laurels/'>Laurels</a> </li>" )
+document.write( "              <li class='sub-item'> <a class='nav-link' href='/Calendar/'>Calendar</a> </li>" )
+document.write( "              <li class='sub-item'> <a class='nav-link' href='/FAQ/'>FAQ</a> </li>" )
+document.write( "            </ul>" )
+document.write( "          </li>" )
+document.write( "          <li class='nav-item'> <a class='nav-link' href='/about.html'>About</a> </li>" )
+document.write( "          <li class='nav-item'> <a class='nav-link' href='/PlayingWithMenu/'>PlayingWithMenu</a> </li>" )
+document.write( "        </ul>" )
+document.write( "      </div>" )
+document.write( "    </nav>" )
+document.write( "  </header>" )
+
 */
+document.write( "        <script type='text/javascript' src='/js/menuFunction.js'></script> <!-- Load the menu Function -->" )
 
 /*
 // Sub Menu bits
