@@ -1,38 +1,162 @@
+
 function addElement() {
-  let Header   = document.createElement("header");
-  let Nav      = document.createElement("nav");
-  Nav.setAttribute("class","navbar");
+  let Header   = document.createElement("header");		//<header>
+  let Nav      = document.createElement("nav");			//  <nav class="navbar">
+      Nav.setAttribute("class","navbar");
 
-  let DivLogo  = document.createElement("div");
-  let logoLink = document.createElement("a");
-  logoLink.setAttribute("href",".");
-  logoLink.setAttribute("class","nav-branding");
+  let logoDiv  = document.createElement("div");			//    <div>	//      <!-- Site Logo -->
+  let logoLink = document.createElement("a");			//      <a href="." class="nav-branding">
+      logoLink.setAttribute("href",".");
+      logoLink.setAttribute("class","nav-branding");
 
-  let logoImg  = document.createElement("img");
-  logoImg.setAttribute("alt","Wood Badge Owl");
-  logoImg.setAttribute("width","35");
-  logoImg.setAttribute("src","img/OwlWoodBadgePatrol.svg");
+  let logoImg  = document.createElement("img");			//        <img alt="Wood Badge Owl" width="35" src="/img/OwlWoodBadgePatrol.svg">
+      logoImg.setAttribute("alt","Wood Badge Owl");
+      logoImg.setAttribute("width","35");
+      logoImg.setAttribute("src","img/OwlWoodBadgePatrol.svg");
 
-  logoLink.appendChild(logoImg);
-  DivLogo.appendChild(logoLink);
-  Nav.appendChild(DivLogo);
+  logoLink.appendChild(logoImg);				//        </img>
+  logoDiv.appendChild(logoLink);				//      </a>
+  Nav.appendChild(logoDiv);					//    </div>
 
-  let titleDiv = document.createElement("div");
-  let titleH2   = document.createElement("h2");
-  logoImg.setAttribute("id","siteTitle");
-  let titleScript = document.createElement("script");
-  logoImg.setAttribute("type","text/javascript");
-  logoImg.setAttribute("src","./pageTitle.js");
+  let titleDiv = document.createElement("div");			//    <div>	//      <!-- Page title (pulled in from file in local dir) -->
+  let titleH2   = document.createElement("h2");			//      <h2 id="siteTitle">
+      titleH2.setAttribute("id","siteTitle");
+  let titleScript = document.createElement("script");		//        <script type="text/javascript" src="./pageTitle.js">
+      titleScript.setAttribute("type","text/javascript");
+      titleScript.setAttribute("src","./pageTitle.js");
 
-  titleH2.appendChild(titleScript);
-  titleDiv.appendChild(titleH2);
-  Nav.appendChild(titleDiv);
+  titleH2.appendChild(titleScript);				//        </script>
+  titleDiv.appendChild(titleH2);				//      </h2>
+  Nav.appendChild(titleDiv);					//    </div>
 
-  let DivMenu  = document.createElement("div");
+  let menuDiv  = document.createElement("div");			//    <div>	//      <!-- Hamburger button using semantic HTML -->
+  let menuButton = document.createElement("button");		//      <button class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-expanded="false">
+      menuButton.setAttribute("class","hamburger");
+      menuButton.setAttribute("id","hamburger");
+      menuButton.setAttribute("aria-label","Toggle navigation");
+      menuButton.setAttribute("aria-expanded","false");
+  let menuBarSpan1 = document.createElement("span");		//        <span class="bar">&nbsp;
+      menuBarSpan1.setAttribute("class","bar");		// &nbsp;
+	//        </span> 
+  let menuBarSpan2 = document.createElement("span");		//        <span class="bar">&nbsp;
+      menuBarSpan2.setAttribute("class","bar");		// &nbsp;
+	//        </span> 
+  let menuBarSpan3 = document.createElement("span");		//        <span class="bar">&nbsp;
+      menuBarSpan3.setAttribute("class","bar");		// &nbsp;
+	//        </span>
+	//      </button>
+  let menuList = document.createElement("ul");			//      <ul class="nav-menu" id="nav-menu">
+      menuList.setAttribute( "class","nav-menu");
+      menuList.setAttribute( "id","nav-menu");
+  let menuItem1 = document.createElement("li");			//        <li class="nav-item">
+      menuItem1.setAttribute( "class","nav-item");
+  let menuItem1Link = document.createElement("a");		//          <a class="nav-link" href="/">Home
+      menuItem1Link.setAttribute( "class","nav-link");
+      menuItem1Link.setAttribute( "href","/");		// Home
+	//          </a>
+	//        </li>
+  let menuItem2 = document.createElement("li");			//        <li class="nav-item" onclick="mySubMenu(1)">Advancement
+      menuItem2.setAttribute( "class","nav-item");
+      menuItem2.setAttribute( "onclick","mySubMenu(1)"); // Advancement
+  let menuListSub1 = document.createElement("ul");		//          <ul id="sub-menu-1" class="sub-menu">
+      menuListSub1.setAttribute( "id","sub-menu-1");
+      menuListSub1.setAttribute( "class","sub-menu");
+  let menuItem2Sub1 = document.createElement("li");		//            <li class="sub-item">
+      menuItem2Sub1.setAttribute( "class","sub-item");
+  let menu-Link = document.createElement("a");			//              <a class="nav-link" href="/Eagle/">Eagle
+      menu-Link.setAttribute( "class","nav-link");
+      menu-Link.setAttribute( "href","/Eagle/");		 // Eagle
+	//              </a>
+	//            </li>
+  let menu-Item = document.createElement("li");			//            <li class="sub-item">
+      menu-Item.setAttribute( "class","sub-item");
+  let menu-Link = document.createElement("a");			//              <a class="nav-link" href="/MBCinfo/">MBC Info
+      menu-Link.setAttribute( "class","nav-link");
+      menu-Link.setAttribute( "href","/MBCinfo/");	// MBC Info
+	//              </a>
+	//            </li>
+  let menu-Item = document.createElement("li");			//            <li class="sub-item">
+      menu-Item.setAttribute( "class","sub-item");
+  let menu-Link = document.createElement("a");			//              <a class="nav-link" href="/Reports/">Reports
+      menu-Link.setAttribute( "class","nav-link");
+      menu-Link.setAttribute( "href","/Reports/");	// Reports
+	//              </a>
+	//            </li>
+  let menu-Item = document.createElement("li");			//            <li class="sub-item">
+      menu-Item.setAttribute( "class","sub-item");
+  let menu-Link = document.createElement("a");			//              <a class="nav-link" href="/Venturing/">Venturing
+      menu-Link.setAttribute( "class","nav-link");
+      menu-Link.setAttribute( "href","/Venturing/">);	// Venturing
+	//              </a>
+	//            </li>
+  let menu-Item = document.createElement("li");			//            <li class="sub-item">
+      menu-Item.setAttribute( "class","sub-item");
+  let menu-Link = document.createElement("a");			//              <a class="nav-link" href="/Misc/">Miscellaneous
+      menu-Link.setAttribute( "class","nav-link");
+      menu-Link.setAttribute( "href","/Misc/");		// Miscellaneous
+	//              </a>
+	//            </li>
+  let menu-Item = document.createElement("li");			//            <li class="sub-item">
+      menu-Item.setAttribute( "class","sub-item");
+  let menu-Link = document.createElement("a");			//              <a class="nav-link" href="/FAQ/">FAQ
+      menu-Link.setAttribute( "class","nav-link");
+      menu-Link.setAttribute( "href","/FAQ/");		// FAQ
+	//              </a>
+	//            </li>
+	//          </ul>
+	//        </li>
+  let menu-Item = document.createElement("li");			//        <li class="nav-item" onclick="mySubMenu(2)">Chief Okemos
+      menu-Item.setAttribute( "class","nav-item");
+      menu-Item.setAttribute( "onclick","mySubMenu(2)");	// Chief Okemos
+  let menu-List = document.createElement("ul");			//          <ul id="sub-menu-2" class="sub-menu">
+      menu-List.setAttribute( "id","sub-menu-2");
+      menu-List.setAttribute( "class","sub-menu");
+  let menu-Item = document.createElement("li");			//            <li class="sub-item">
+      menu-Item.setAttribute( "class","sub-item");
+  let menu-Link = document.createElement("a");			//              <a class="nav-link" href="/Laurels/">Laurels
+      menu-Link.setAttribute( "class","nav-link");
+      menu-Link.setAttribute( "href","/Laurels/");	// Laurels
+	//              </a>
+	//            </li>
+  let menu-Item = document.createElement("li");			//            <li class="sub-item">
+      menu-Item.setAttribute( "class","sub-item");
+  let menu-Link = document.createElement("a");			//              <a class="nav-link" href="/Calendar/">Calendar
+      menu-Link.setAttribute( "class","nav-link");
+      menu-Link.setAttribute( "href","/Calendar/");	// Calendar
+	//              </a>
+	//            </li>
+  let menu-Item = document.createElement("li");			//            <li class="sub-item">
+      menu-Item.setAttribute( "class","sub-item");
+  let menu-Link = document.createElement("a");			//              <a class="nav-link" href="/FAQ/">FAQ
+      menu-Link.setAttribute( "class","nav-link");
+      menu-Link.setAttribute( "href","/FAQ/");		// FAQ
+	//              </a>
+	//            </li>
+	//          </ul>
+	//        </li>
+  let menu-Item = document.createElement("li");			//        <li class="nav-item">
+      menu-Item.setAttribute( "class","nav-item");
+  let menu-Link = document.createElement("a");			//          <a class="nav-link" href="/about.html">About
+      menu-Link.setAttribute( "class","nav-link");
+      menu-Link.setAttribute( "href","/about.html");	// About
+	//          </a>
+	//        </li>
+  let menu-Item = document.createElement("li");			//        <li class="nav-item">
+      menu-Item.setAttribute( "class","nav-item");
+  let menu-Link = document.createElement("a");			//          <a class="nav-link" href="/PlayingWithMenu/">PlayingWithMenu
+      menu-Link.setAttribute( "class","nav-link");
+      menu-Link.setAttribute( "href","/PlayingWithMenu/"); // PlayingWithMenu
+	//          </a>
+	//        </li>
+	//      </ul>
+	//    </div>
+	//  </nav>
 
-  Header.appendChild(Nav);
+  Header.appendChild(Nav);					//</header>
 }
-addElement();
+addElement(); // run the addElement function created above
+
+
 
 
 //document.write( "  <header>" )
@@ -42,40 +166,41 @@ addElement();
 //document.write( "      </div>" )
 //document.write( "      <div> <!-- Page title (pulled in from file in local dir) -->" )
 //document.write( "        <h2 id='siteTitle'>" )
-document.write( "        <script type='text/javascript' src='./pageTitle.js'></script></h2>" )
-document.write( "      </div>" )
-document.write( "      <div> <!-- Hamburger button using semantic HTML -->" )
-document.write( "        <button class='hamburger' id='hamburger' aria-label='Toggle navigation' aria-expanded='false'><span class='bar'>&nbsp;</span> <span class='bar'>&nbsp;</span> <span class='bar'>&nbsp;</span></button>" )
-document.write( "        <ul class='nav-menu' id='nav-menu'>" )
-document.write( "          <li class='nav-item'> <a class='nav-link' href='/'>Home</a> </li>" )
-document.write( "          <li class='nav-item' onclick='mySubMenu(1)'>Advancement" )
-document.write( "            <ul id='sub-menu-1' class='sub-menu'>" )
-document.write( "              <li class='sub-item'> <a class='nav-link' href='/Eagle/'>Eagle</a> </li>" )
-document.write( "              <li class='sub-item'> <a class='nav-link' href='/MBCinfo/'>MBC Info</a> </li>" )
-document.write( "              <li class='sub-item'> <a class='nav-link' href='/Reports/'>Reports</a> </li>" )
-document.write( "              <li class='sub-item'> <a class='nav-link' href='/Venturing/'>Venturing</a> </li>" )
-document.write( "              <li class='sub-item'> <a class='nav-link' href='/Misc/'>Miscellaneous</a> </li>" )
-document.write( "              <li class='sub-item'> <a class='nav-link' href='/FAQ/'>FAQ</a> </li>" )
-document.write( "            </ul>" )
-document.write( "          </li>" )
-document.write( "          <li class='nav-item' onclick='mySubMenu(2)'>Chief Okemos" )
-document.write( "            <ul id='sub-menu-2' class='sub-menu'>" )
-document.write( "              <li class='sub-item'> <a class='nav-link' href='/Laurels/'>Laurels</a> </li>" )
-document.write( "              <li class='sub-item'> <a class='nav-link' href='/Calendar/'>Calendar</a> </li>" )
-document.write( "              <li class='sub-item'> <a class='nav-link' href='/FAQ/'>FAQ</a> </li>" )
-document.write( "            </ul>" )
-document.write( "          </li>" )
-document.write( "          <li class='nav-item'> <a class='nav-link' href='/about.html'>About</a> </li>" )
-document.write( "          <li class='nav-item'> <a class='nav-link' href='/PlayingWithMenu/'>PlayingWithMenu</a> </li>" )
-document.write( "        </ul>" )
-document.write( "      </div>" )
-document.write( "    </nav>" )
-document.write( "  </header>" )
+//document.write( "        <script type='text/javascript' src='./pageTitle.js'></script></h2>" )
+//document.write( "      </div>" )
+//document.write( "      <div> <!-- Hamburger button using semantic HTML -->" )
+//document.write( "        <button class='hamburger' id='hamburger' aria-label='Toggle navigation' aria-expanded='false'> <span class='bar'>&nbsp;</span> <span class='bar'>&nbsp;</span> <span class='bar'>&nbsp;</span></button>" )
+//document.write( "        <ul class='nav-menu' id='nav-menu'>" )
+//document.write( "          <li class='nav-item'> <a class='nav-link' href='/'>Home</a> </li>" )
+//document.write( "          <li class='nav-item' onclick='mySubMenu(1)'>Advancement" )
+//document.write( "            <ul id='sub-menu-1' class='sub-menu'>" )
+//document.write( "              <li class='sub-item'> <a class='nav-link' href='/Eagle/'>Eagle</a> </li>" )
+//document.write( "              <li class='sub-item'> <a class='nav-link' href='/MBCinfo/'>MBC Info</a> </li>" )
+//document.write( "              <li class='sub-item'> <a class='nav-link' href='/Reports/'>Reports</a> </li>" )
+//document.write( "              <li class='sub-item'> <a class='nav-link' href='/Venturing/'>Venturing</a> </li>" )
+//document.write( "              <li class='sub-item'> <a class='nav-link' href='/Misc/'>Miscellaneous</a> </li>" )
+//document.write( "              <li class='sub-item'> <a class='nav-link' href='/FAQ/'>FAQ</a> </li>" )
+//document.write( "            </ul>" )
+//document.write( "          </li>" )
+//document.write( "          <li class='nav-item' onclick='mySubMenu(2)'>Chief Okemos" )
+//document.write( "            <ul id='sub-menu-2' class='sub-menu'>" )
+//document.write( "              <li class='sub-item'> <a class='nav-link' href='/Laurels/'>Laurels</a> </li>" )
+//document.write( "              <li class='sub-item'> <a class='nav-link' href='/Calendar/'>Calendar</a> </li>" )
+//document.write( "              <li class='sub-item'> <a class='nav-link' href='/FAQ/'>FAQ</a> </li>" )
+//document.write( "            </ul>" )
+//document.write( "          </li>" )
+//document.write( "          <li class='nav-item'> <a class='nav-link' href='/about.html'>About</a> </li>" )
+//document.write( "          <li class='nav-item'> <a class='nav-link' href='/PlayingWithMenu/'>PlayingWithMenu</a> </li>" )
+//document.write( "        </ul>" )
+//document.write( "      </div>" )
+//document.write( "    </nav>" )
+//document.write( "  </header>" )
 
-/*
 document.write( "        <script type='text/javascript' src='/js/menuFunction.js'></script> <!-- Load the menu Function -->" )
+/*
 */
 
+/*
 // Sub Menu bits
 function mySubMenu(i) {
   let subMenu = document.getElementById(`sub-menu-${i}`);
@@ -95,5 +220,6 @@ hamburger.addEventListener('click', () => {
   const isExpanded = hamburger.getAttribute('aria-expanded') === 'true' || false;
   hamburger.setAttribute('aria-expanded', !isExpanded);
 });
-/*
 */
+
+
