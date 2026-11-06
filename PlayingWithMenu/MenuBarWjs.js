@@ -1,13 +1,4 @@
-function exampleAddElement() {
-  let newH2 = document.createElement("h2");			// create a new h2 element
-  let newH2Content = document.createTextNode("js example");	// and give it some content
-  newH2.appendChild(newH2Content);				// add the text node to the newly created div
-  let currentDiv = document.getElementById("div1");		// add the newly created element and its content into the DOM
-  document.body.insertBefore(newH2, currentDiv);		// add the newly created element and its content into the DOM
-} exampleAddElement();
-document.write( "<br><hr><br>" )
-
-function addElement() {
+function olwsAdvancementMenu() {
   let Header   = document.createElement("header");		//<header>
   let Nav      = document.createElement("nav");			//  <nav class="navbar">
       Nav.setAttribute("class","navbar");
@@ -87,18 +78,19 @@ function addElement() {
   menuAdvancement.appendChild(menuAdvancementText);
   menuList.appendChild(menuAdvancement);
   menuDiv.appendChild(menuList);				//    </div> at the same level as <button>...
-//--------
-/*
-  let menuListSub1 = document.createElement("ul");		//          <ul id="sub-menu-1" class="sub-menu">
-      menuListSub1.setAttribute( "id","sub-menu-1");
-      menuListSub1.setAttribute( "class","sub-menu");
-  let menuItem2Sub1 = document.createElement("li");		//            <li class="sub-item">
-      menuItem2Sub1.setAttribute( "class","sub-item");
-  let menu-Link = document.createElement("a");			//              <a class="nav-link" href="/Eagle/">Eagle
-      menu-Link.setAttribute( "class","nav-link");
-      menu-Link.setAttribute( "href","/Eagle/");		 // Eagle
+
+  let menuAdvancementList = document.createElement("ul");		//          <ul id="sub-menu-1" class="sub-menu">
+      menuAdvancementList.setAttribute( "id","sub-menu-1");
+      menuAdvancementList.setAttribute( "class","sub-menu");
+  let menuAdvancementEagle = document.createElement("li");		//            <li class="sub-item">
+      menuAdvancementEagle.setAttribute( "class","sub-item");
+  let menuAdvancementEagleLink = document.createElement("a");			//              <a class="nav-link" href="/Eagle/">Eagle
+      menuAdvancementEagleLink.setAttribute( "class","nav-link");
+      menuAdvancementEagleLink.setAttribute( "href","/Eagle/");		 // Eagle
 	//              </a>
 	//            </li>
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+/*
   let menu-Item = document.createElement("li");			//            <li class="sub-item">
       menu-Item.setAttribute( "class","sub-item");
   let menu-Link = document.createElement("a");			//              <a class="nav-link" href="/MBCinfo/">MBC Info
@@ -187,11 +179,11 @@ function addElement() {
 
   let domMenu = document.getElementById("Menu");		// add the newly created element and its content into the DOM
   document.body.insertBefore(Header, domMenu);			// add the newly created element and its content into the DOM
-}
-addElement(); // run the addElement function created above
+} olwsAdvancementMenu(); // run the olwsAdvancementMenu function created above
 
 
 document.write( "<br><hr><br>" )
+
 
 
 /*
@@ -262,3 +254,12 @@ hamburger.addEventListener('click', () => {
 */
 
 
+/*
+function exampleAddElement() {
+  let newH2 = document.createElement("h2");			// create a new h2 element
+  let newH2Content = document.createTextNode("js example");	// and give it some content
+  newH2.appendChild(newH2Content);				// add the text node to the newly created div
+  let currentDiv = document.getElementById("div1");		// add the newly created element and its content into the DOM
+  document.body.insertBefore(newH2, currentDiv);		// add the newly created element and its content into the DOM
+} exampleAddElement();
+ */
